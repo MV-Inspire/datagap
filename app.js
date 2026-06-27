@@ -489,9 +489,11 @@ function updateHeader() {
   document.querySelector("#consentStatus").textContent = state.deleted
     ? "Data deleted"
     : `${state.consent.size} permissions active`;
-  document.querySelector("#activeRole").textContent =
-    state.role === "farmer" ? "User" : state.role === "admin" ? "Admin" : "Company";
-  document.querySelector("#switchRole").textContent = "Next";
+  const roleLabel = state.role === "farmer" ? "User" : state.role === "admin" ? "Admin" : "Company";
+  document.querySelector("#activeRole").textContent = roleLabel;
+  const switchRoleButton = document.querySelector("#switchRole");
+  switchRoleButton.textContent = "Change";
+  switchRoleButton.setAttribute("aria-label", `Change from ${roleLabel} account`);
   document.querySelectorAll(".track-option").forEach((button) => {
     button.classList.toggle("active", button.dataset.track === state.activeTrack);
   });
