@@ -17,8 +17,8 @@ DataGap is an ethical data marketplace and insight platform. Users choose what d
 
 The prototype has two connected sections:
 
-1. **General Life DataGap** - for everyday users who share optional general data such as spending preferences, mobility patterns, digital preferences, market signals, and surveys.
-2. **Al Quaa Camel Farming DataGap** - a dedicated local section for camel farmers, focused on camel health, feeding, milk production, breeding, environment, market prices, and surveys.
+1. **Personal Data** - for everyday users who share optional categories such as spending preferences, mobility patterns, digital preferences, local service needs, and surveys.
+2. **Al Quaa Farm Records** - a dedicated local section for camel farmers, focused on camel health, feeding, milk production, breeding, environment, market prices, and local visitor demand.
 
 This keeps the idea scalable while making the hackathon solution feel built for Al Quaa and its people.
 
@@ -35,22 +35,23 @@ These claims are testable in the prototype:
 
 | Claim | How to verify |
 |---|---|
-| Users can control what data they share. | Open **Data Permissions** and toggle categories. |
+| Users can control what data they share. | Open **Permissions** and toggle categories. |
 | Reward estimates react to consent choices. | Toggle permissions and watch the estimate change. |
-| Users can submit data and earn rewards. | Open **Manual Submission**, submit a record, then check **Wallet**. |
-| Companies can buy anonymized data products. | Open **Company Portal** and click **Buy access**. |
-| Companies can preview anonymized data safely. | Open **Company Portal** and click **Preview rows**. |
+| Users can submit data and earn rewards. | Open **Submit**, submit a record, then check **Wallet**. |
+| Companies can buy anonymized data products. | Switch to the company account, open **Marketplace**, and click **Buy access**. |
+| Companies can preview anonymized data safely. | Switch to the company account, open **Marketplace**, and click **Preview rows**. |
 | Farmer revenue share is recorded. | After a company purchase, open **Wallet Ledger**. |
 | Buyer rankings update after purchases. | Open **Buyers** after company activity. |
-| Admins can review submitted records. | Open **Admin Review** and approve/reject a submission. |
-| Consent changes are auditable. | Toggle permissions, then open **Admin Review** and check the audit log. |
+| Admins can review submitted records. | Switch to the admin account, open **Review**, and approve/reject a submission. |
+| Consent changes are auditable. | Toggle permissions, then switch to the admin account and check the audit log in **Review**. |
 | Users can delete their data. | Open **Profile** and click **Delete all my data**. |
 | Demo state persists after refresh. | Perform an action, refresh the page, and check the state remains. |
 
 ## Implemented Demo Behaviors
 
-- Profile/login simulation with farmer/customer and company roles.
-- Two-section product model: general users and Al Quaa camel farmers.
+- Role-based simulation for user/farmer, company, and admin accounts.
+- Role-specific navigation so each account sees only the pages relevant to it.
+- Two-section product model: personal data and Al Quaa farm records.
 - Consent management with live reward estimates.
 - Manual data submissions that create wallet credits.
 - Sponsored surveys that add rewards.
@@ -97,24 +98,63 @@ Working in the demo:
 
 ## Feasibility and Deployment
 
-The first real deployment can be lightweight:
+DataGap is feasible as a staged rural deployment because the first version does not require complex automation, sensors, or expensive infrastructure. The most realistic pilot is a small web app operated with manual review and controlled onboarding.
 
-1. Start as a web app for a small group of Al Quaa farmers.
-2. Use manual review before any data is approved for company-facing reports.
-3. Store consent records, submissions, wallet credits, and company requests in a database.
-4. Share only aggregated or anonymized reports.
-5. Add real payment integration only after legal and compliance review.
+### Pilot Plan
 
-This avoids the biggest early risks while still creating value quickly.
+1. **Pilot group:** start with 10 to 20 Al Quaa camel farmers and 3 to 5 local data buyers such as feed suppliers, veterinarians, camel milk businesses, agri-tech teams, or local entrepreneurs.
+2. **Data collection:** begin with manual submissions, short surveys, and optional file uploads rather than automatic tracking. This keeps the product simple, understandable, and safer for early users.
+3. **Human review:** every submitted record is reviewed before it becomes part of any company-facing dataset or report.
+4. **Anonymized outputs:** companies receive aggregated insights, anonymized rows, and summary reports rather than direct personal or farm identities.
+5. **Reward handling:** early rewards can be handled as approved wallet credits or manual payouts before integrating a real payment gateway.
+6. **Feedback loop:** farmers and buyers review whether the insights are useful, then the team improves categories, pricing, and reports.
+
+### Deployment Requirements
+
+| Area | Practical Approach |
+|---|---|
+| Hosting | A low-cost web app hosted on a standard cloud platform or university-supported server. |
+| Database | PostgreSQL or Firebase/Supabase to store users, consent records, submissions, transactions, and dataset requests. |
+| Authentication | Email/password or phone-based login, with separate roles for users/farmers, companies, and admins. |
+| Admin operations | One admin reviewer can manually approve early submissions and handle deletion requests. |
+| Data privacy | Store consent per category, keep audit logs, and expose only anonymized or aggregated outputs to companies. |
+| Payments | Start with manual payout records; add payment integration only after legal and compliance review. |
+| AI | Start with rule-based reports and simple statistical summaries; later connect a real AI analytics service. |
+
+### Cost and Maintenance Assumptions
+
+For a small pilot, the technical cost can remain low. A basic hosted web app, database, and storage layer can be operated with limited monthly cost. The larger cost is operational: onboarding farmers, reviewing submissions, validating data quality, and maintaining trust. This is manageable at pilot scale because the system intentionally starts with manual review instead of fully automated data trading.
+
+Main maintenance tasks:
+
+- verify submitted records before using them in reports,
+- handle consent changes and data deletion requests,
+- monitor dataset quality and remove unreliable submissions,
+- update reward estimates based on buyer demand,
+- support companies when they request or purchase datasets.
+
+### Key Risks and Mitigations
+
+| Risk | Mitigation |
+|---|---|
+| Users may not trust the platform with data. | Use clear consent controls, show exactly what is shared, and allow deletion at any time. |
+| Companies may worry about data quality. | Use admin review, category rules, and minimum dataset sizes before selling insights. |
+| Privacy expectations may be misunderstood. | Show only aggregated/anonymized data and keep direct identities hidden from companies. |
+| Payments may create legal complexity. | Begin with simulated/manual credits, then add real payouts only after compliance review. |
+| Rural adoption may be slow. | Start with a small farmer group and demonstrate direct value through useful reports and rewards. |
+
+This deployment path avoids the biggest early risks while still creating measurable value quickly.
 
 ## Scalability
 
 DataGap can scale in two ways:
 
-- **More users:** expand from Al Quaa farmers to more residents and entrepreneurs.
-- **More domains:** add specialized sections for tourism, stargazing services, local events, agriculture, and other rural communities.
+- **More users:** expand from Al Quaa farmers to more residents, local businesses, and entrepreneurs.
+- **More domains:** add specialized sections for tourism, stargazing services, local events, agriculture, household services, and other rural needs.
+- **More communities:** reuse the same consent, submission, marketplace, and AI-report structure in other rural communities after adapting the data categories.
+- **More buyers:** allow vetted companies, researchers, suppliers, and public-sector partners to access approved aggregated insights.
 
-The two-section structure supports this: one general platform plus specialized local modules.
+The product is designed as one general consent platform with specialized local modules. Al Quaa camel farming is the first local module, but the same structure can support other communities and sectors.
 
 ## How to Run
 
@@ -134,17 +174,16 @@ npm run check
 
 ## Recommended Demo Flow
 
-1. Open **Overview** and explain the two systems: general life data and Al Quaa camel farming.
-2. Open **Data Permissions** and toggle categories.
-3. Open **Manual Submission** and submit a camel farm record.
+1. Open **Home** and explain the two systems: personal data and Al Quaa farm records.
+2. Open **Permissions** and toggle categories.
+3. Open **Submit** and submit a camel farm record.
 4. Complete a sponsored survey.
-5. Open **Company Portal**, preview anonymized rows, then buy dataset access.
-6. Open **Admin Review** and approve/reject a submitted record.
+5. Switch to the company account and open **Marketplace**, preview anonymized rows, then buy dataset access.
+6. Switch to the admin account and open **Review** to approve or reject a submitted record.
 7. Open **Wallet** and show the ledger updated.
 8. Open **Buyers** and show buyer ranking.
-9. Open **AI Insights** and explain the simulated AI reports.
+9. Open **Insights / AI Reports** and explain the simulated AI reports.
 10. Open **Profile** and show delete-data and reset-demo controls.
-11. Open **Demo Guide** for the judge checklist.
 
 ## Tools Used
 
@@ -162,12 +201,10 @@ npm run check
 ├── styles.css
 ├── app.js
 ├── package.json
-├── docs/
-│   └── project-brief.md
-└── output/
-    └── doc/
-        └── DataGap_Team_Distribution.docx
+└── README.md
 ```
+
+Assets such as screenshots or demo video may be added before final submission, but the current application runs from the files above.
 
 ## Evidence and Validation
 
