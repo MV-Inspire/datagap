@@ -34,7 +34,7 @@
 
 **Community Focus:** Al Quaa, Al Ain, UAE
 
-**Prototype Type:** Fully working demo simulation
+**Prototype Type:** Wizard of Oz MVP (Interactive Frontend Prototype)
 
 ---
 
@@ -335,7 +335,7 @@ The following functional and non-functional requirements define the expected beh
 
 ---
 
-# 🧪 What Is Simulated
+# 🧪 Simulated Components
 
 > [!IMPORTANT]
 > This prototype is intentionally a polished **frontend demonstration**, not a production deployment.
