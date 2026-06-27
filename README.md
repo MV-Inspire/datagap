@@ -210,7 +210,7 @@ The following use case diagrams illustrate how the different stakeholders intera
 ### 📐 UML Use Case Diagram
 
 <p align="center">
-  <img src="assets/use-case-diagram.png" alt="DataGap UML Use Case Diagram" width="100%">
+  <img src="assets/Use Case UML.jpg" alt="DataGap UML Use Case Diagram" width="100%">
 </p>
 
 ---
