@@ -142,12 +142,16 @@ The Business Model Canvas summarizes the key components of DataGap's business mo
 </p>
 
 ---
-
 ## 🚀 Minimum Viable Product (MVP)
 
-*Coming next...*
+**MVP Type:** Wizard of Oz MVP
 
+DataGap is developed as a **Wizard of Oz Minimum Viable Product (MVP)**, providing users with a realistic end-to-end experience while intentionally simulating complex backend services such as telemetry, AI analytics, authentication, payment processing, and enterprise anonymization.
 
+This approach enables the team to validate the platform's core concept, user workflows, and business model within the scope of the hackathon, while avoiding the time and infrastructure required for a full production deployment.
+
+> [!NOTE]
+> Details of the implemented features and simulated components are presented later in the **Implemented Demo Behaviors** and **What Is Simulated** sections.
 
 ---
 # 👥 Target Users
