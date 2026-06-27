@@ -306,6 +306,36 @@ const titles = {
   about: "About DataGap",
 };
 
+const roleNavigation = {
+  farmer: [
+    { view: "overview", label: "Home" },
+    { view: "permissions", label: "Permissions" },
+    { view: "submit", label: "Submit" },
+    { view: "wallet", label: "Wallet" },
+    { view: "buyers", label: "Buyers" },
+    { view: "ai", label: "Insights" },
+    { view: "profile", label: "Profile" },
+  ],
+  company: [
+    { view: "company", label: "Marketplace" },
+    { view: "ai", label: "AI Reports" },
+    { view: "profile", label: "Profile" },
+    { view: "about", label: "Trust" },
+  ],
+  admin: [
+    { view: "admin", label: "Review" },
+    { view: "ai", label: "Signals" },
+    { view: "profile", label: "Profile" },
+    { view: "about", label: "Platform" },
+  ],
+};
+
+const roleDefaults = {
+  farmer: "overview",
+  company: "company",
+  admin: "admin",
+};
+
 function money(value) {
   return `AED ${value.toLocaleString("en-AE")}`;
 }
@@ -447,14 +477,43 @@ function updateNavIndicator() {
   nav.style.setProperty("--nav-indicator-h", `${indicatorHeight}px`);
 }
 
-function setView(view) {
-  state.activeView = view;
-  document.querySelectorAll(".view").forEach((section) => section.classList.remove("active"));
-  document.querySelector(`#${view}`).classList.add("active");
-  document.querySelectorAll(".nav-item").forEach((button) => {
-    button.classList.toggle("active", button.dataset.view === view);
+function allowedViewsForRole(role = state.role) {
+  return (roleNavigation[role] || roleNavigation.farmer).map((item) => item.view);
+}
+
+function defaultViewForRole(role = state.role) {
+  return roleDefaults[role] || "overview";
+}
+
+function isViewAllowed(view, role = state.role) {
+  return allowedViewsForRole(role).includes(view);
+}
+
+function renderRoleNavigation() {
+  const nav = document.querySelector("nav");
+  const items = roleNavigation[state.role] || roleNavigation.farmer;
+  nav.innerHTML = items
+    .map(
+      (item) => `
+        <button class="nav-item" data-view="${item.view}" type="button">${item.label}</button>
+      `,
+    )
+    .join("");
+
+  nav.querySelectorAll(".nav-item").forEach((button) => {
+    button.addEventListener("click", () => setView(button.dataset.view));
   });
-  document.querySelector("#pageTitle").textContent = titles[view];
+}
+
+function setView(view) {
+  const safeView = isViewAllowed(view) ? view : defaultViewForRole();
+  state.activeView = safeView;
+  document.querySelectorAll(".view").forEach((section) => section.classList.remove("active"));
+  document.querySelector(`#${safeView}`).classList.add("active");
+  document.querySelectorAll(".nav-item").forEach((button) => {
+    button.classList.toggle("active", button.dataset.view === safeView);
+  });
+  document.querySelector("#pageTitle").textContent = titles[safeView];
   window.requestAnimationFrame(updateNavIndicator);
 }
 
@@ -467,6 +526,7 @@ function setTrack(track) {
 }
 
 function updateHeader() {
+  renderRoleNavigation();
   document.querySelector("#walletBalance").textContent = money(earnedBalance());
   document.querySelector("#consentStatus").textContent = state.deleted
     ? "Data deleted"
@@ -1354,6 +1414,7 @@ function renderProfile() {
   document.querySelector("#profileForm").addEventListener("submit", (event) => {
     event.preventDefault();
     const form = new FormData(event.target);
+    const previousRole = state.role;
     state.profile = {
       name: String(form.get("name")),
       email: String(form.get("email")),
@@ -1361,10 +1422,11 @@ function renderProfile() {
       bank: String(form.get("bank")),
     };
     state.role = String(form.get("role"));
+    state.activeView = previousRole === state.role ? "profile" : defaultViewForRole();
     state.authenticated = true;
     saveState();
     rerender();
-    setView("profile");
+    setView(state.activeView);
     showToast("Profile saved");
   });
 
@@ -1432,19 +1494,16 @@ function rerender() {
   renderAbout();
 }
 
-document.querySelectorAll(".nav-item").forEach((button) => {
-  button.addEventListener("click", () => setView(button.dataset.view));
-});
-
 document.querySelectorAll(".track-option").forEach((button) => {
   button.addEventListener("click", () => setTrack(button.dataset.track));
 });
 
 document.querySelector("#switchRole").addEventListener("click", () => {
   state.role = state.role === "farmer" ? "company" : state.role === "company" ? "admin" : "farmer";
+  state.activeView = defaultViewForRole();
   saveState();
-  setView(state.role === "company" ? "company" : state.role === "admin" ? "admin" : "overview");
   rerender();
+  setView(state.activeView);
   showToast(`Switched to ${state.role === "farmer" ? "user" : state.role} account`);
 });
 
@@ -1453,6 +1512,6 @@ window.addEventListener("resize", updateNavIndicator);
 
 loadState();
 rerender();
-setView("overview");
+setView(state.activeView);
 updateScrolledNavigation();
 updateNavIndicator();
