@@ -17,6 +17,12 @@
 ![Storage](https://img.shields.io/badge/Storage-localStorage-orange?style=for-the-badge)
 ![Status](https://img.shields.io/badge/Status-Demo-green?style=for-the-badge)
 
+<br>
+
+### 🎥 Prototype Walkthrough
+
+[Watch the walkthrough video](https://github.com/MV-Inspire/datagap/releases/tag/v1.0-demo)
+
 </div>
 
 ---
