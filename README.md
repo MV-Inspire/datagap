@@ -27,7 +27,7 @@
 
 <p align="center">
   <a href="https://youtu.be/E-6qcfYXsLs">
-    <img src="assets/video-thumbnail.png" width="800" alt="Watch the walkthrough">
+    <img src="assets/Thumbnail" width="800" alt="Watch the walkthrough">
   </a>
 </p>
 
