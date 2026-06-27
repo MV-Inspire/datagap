@@ -23,10 +23,17 @@
 
 [Open DataGap on Vercel](https://data-gap-hackathon.vercel.app/)
 
-### 🎥 Prototype Walkthrough
+# 🎥 Project Walkthrough
 
-[Watch the walkthrough video](https://github.com/MV-Inspire/datagap/releases/tag/v1.0-demo)
+<p align="center">
+  <a href="https://youtu.be/E-6qcfYXsLs">
+    <img src="assets/video-thumbnail.png" width="800" alt="Watch the walkthrough">
+  </a>
+</p>
 
+<p align="center">
+  <b>▶️ Click the image above to watch the walkthrough.</b>
+</p>
 </div>
 
 ---
