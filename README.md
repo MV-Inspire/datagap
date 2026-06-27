@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/Logo.png" alt="DataGap Logo" width="180">
+
 # 🚀 DataGap
 
 ### Ethical Data Marketplace & Insight Platform
