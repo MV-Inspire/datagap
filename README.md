@@ -147,7 +147,7 @@ The analysis outlines the platform's business model and the scope of the **Minim
 The Business Model Canvas summarizes the key components of DataGap's business model, including its value proposition, customer segments, revenue streams, key partners, and operational activities.
 
 <p align="center">
-  <img src="assets/System Architecture Design .png" alt="DataGap Business Model Canvas" width="100%">
+  <img src="assets/Business Model Canvas.jpg" alt="DataGap Business Model Canvas" width="100%">
 </p>
 
 ---
@@ -173,17 +173,27 @@ This section presents the high-level design of the **DataGap** platform, illustr
 The following diagram provides a high-level overview of the DataGap platform, showing the primary user groups, core platform modules, data flow, storage layer, and external services considered for future deployment.
 
 <p align="center">
-  <img src="assets/system-architecture.png" alt="DataGap System Architecture Diagram" width="100%">
+  <img src="assets/System Architecture Design.png" alt="DataGap System Architecture Diagram" width="100%">
 </p>
 
 ---
 
 ## 👥 Use Case Diagrams
 
-We created Use Case diagrams to showcase how system stakeholders will be interacting with the system to-be, here we showcase 1 text-based use case, as-well as a UML use case diagram.
+The following use case diagrams illustrate how the different stakeholders interact with the DataGap platform. A text-based use case is provided to describe a key system interaction in detail, followed by a UML Use Case Diagram that presents a high-level overview of the system actors and their associated functionalities.
+
+### 📝 Text-Based Use Case
 
 <p align="center">
-  <img src="assets/use-case-diagram.png" alt="DataGap Use Case Diagram" width="100%">
+  <img src="assets/Text Based Use Case 1.png" alt="DataGap Text-Based Use Case" width="100%">
+</p>
+
+---
+
+### 📐 UML Use Case Diagram
+
+<p align="center">
+  <img src="assets/use-case-diagram.png" alt="DataGap UML Use Case Diagram" width="100%">
 </p>
 
 ---
@@ -464,15 +474,20 @@ The architecture supports one general marketplace with unlimited specialized com
 
 ```text
 .
+├── 📄 README.md
 ├── 📄 index.html
 ├── 🎨 styles.css
 ├── ⚙️ app.js
 ├── 📦 package.json
-├── 📂 docs
-│   └── 📄 project-brief.md
-└── 📂 output
-    └── 📂 doc
-        └── 📄 DataGap_Team_Distribution.docx
+├── 📄 .gitignore
+│
+└── 📂 assets
+    ├── 🖼️ Logo.png
+    ├── 🖼️ Business Model Canvas.jpg
+    ├── 🖼️ VPC.png
+    ├── 🖼️ System Architecture Design.png
+    ├── 🖼️ Text Based Use Case 1.png
+    └── 🎥 walkthrough.mp4
 ```
 
 ---
