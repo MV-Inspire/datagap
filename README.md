@@ -465,22 +465,56 @@ The architecture supports one general marketplace with unlimited specialized com
 
 # 🎬 Recommended Demo Flow
 
-> [!TIP]
-> Judges can verify every major feature in under **5 minutes** by following this sequence.
+🎬 Recommended Demo Flow
 
-1. 🏠 Overview
-2. 🔒 Data Permissions
-3. 📝 Manual Submission
-4. 📋 Sponsored Survey
-5. 🏢 Company Portal
-6. 👀 Dataset Preview
-7. 💳 Buy Dataset
-8. 🛡️ Admin Review
-9. 💰 Wallet
-10. 🏆 Buyers
-11. 🤖 AI Insights
-12. 👤 Profile
-13. 📖 Demo Guide
+> [!TIP]
+> Judges can verify every major feature in under **5 minutes** by following the walkthrough below.
+
+
+🏠 1. Overview
+
+Introduce DataGap, the problem it addresses, and the two-platform architecture.
+
+<p align="center"> <img src="assets/screenshots/trust-about.png" alt="Overview" width="100%"> </p>
+
+🔒 2. Data Permissions
+
+Demonstrate how users control the categories of data they choose to share and observe the live reward estimate update.
+
+<p align="center"> <img src="assets/screenshots/personal-permissions.png" alt="Data Permissions" width="100%"> </p>
+
+📝 3. Submit Data & Complete Surveys
+
+Submit a sample camel farming record and complete a sponsored survey to generate rewards.
+
+<p align="center"> <img src="assets/screenshots/submit-data-surveys.png" alt="Manual Submission" width="100%"> </p>
+
+🏢 4. Company Marketplace
+
+Preview anonymized datasets and simulate purchasing access to community insights.
+
+<p align="center"> <img src="assets/screenshots/company-marketplace.png" alt="Company Marketplace" width="100%"> </p>
+
+🛡️ 5. Admin Review
+
+Approve or reject submitted records and demonstrate the consent audit log.
+
+<p align="center"> <img src="assets/screenshots/admin-review-audit.png" alt="Admin Review" width="100%"> </p>
+
+💰 6. Wallet & Rewards
+
+Show wallet balance, reward history, revenue sharing, and transfer requests.
+
+<p align="center"> <img src="assets/screenshots/wallet-rewards.png" alt="Wallet" width="100%"> </p>
+
+🤖 7. AI Insights
+
+Display the rule-based AI insights generated from submitted community data.
+
+<p align="center"> <img src="assets/screenshots/insight-signals.png" alt="AI Insights" width="100%"> </p>
+
+
+These features can be explored at any point during the demonstration and are fully covered in the accompanying walkthrough video.
 
 ---
 
