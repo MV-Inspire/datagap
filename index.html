@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DataGap</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img">
+              <path d="M10 29c7-13 18-20 31-21-3 15-10 25-22 30l-5-5 10-10-13 7-1-1Z" />
+              <path d="M12 35c7 3 15 3 24-1-5 6-12 9-21 8l-3-7Z" />
+              <circle cx="32" cy="16" r="3" />
+            </svg>
+          </div>
+          <div>
+            <strong>DataGap</strong>
+            <span>Consent-based data exchange</span>
+          </div>
+        </div>
+
+        <nav aria-label="Main navigation">
+          <button class="nav-item active" data-view="overview">Home</button>
+          <button class="nav-item" data-view="permissions">Permissions</button>
+          <button class="nav-item" data-view="submit">Submit</button>
+          <button class="nav-item" data-view="wallet">Wallet</button>
+          <button class="nav-item" data-view="buyers">Buyers</button>
+          <button class="nav-item" data-view="company">Companies</button>
+          <button class="nav-item" data-view="admin">Admin Review</button>
+          <button class="nav-item" data-view="ai">AI Insights</button>
+          <button class="nav-item" data-view="profile">Profile</button>
+          <button class="nav-item" data-view="about">About</button>
+        </nav>
+
+        <div class="role-card">
+          <span>Account</span>
+          <strong id="activeRole">User</strong>
+          <button id="switchRole" type="button" aria-label="Switch account role">Switch</button>
+        </div>
+      </aside>
+
+      <main class="content">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">General users + Al Quaa camel farmers</p>
+            <h1 id="pageTitle">Data Control Center</h1>
+          </div>
+          <div class="topbar-actions">
+            <div class="track-switch" aria-label="Choose data view">
+              <span>View</span>
+              <button class="track-option active" type="button" data-track="general">General</button>
+              <button class="track-option" type="button" data-track="camel">Camel</button>
+            </div>
+            <div class="status-strip">
+              <span id="consentStatus">Consent active</span>
+              <strong id="walletBalance">AED 0</strong>
+            </div>
+          </div>
+        </header>
+
+        <section id="overview" class="view active"></section>
+        <section id="permissions" class="view"></section>
+        <section id="submit" class="view"></section>
+        <section id="wallet" class="view"></section>
+        <section id="buyers" class="view"></section>
+        <section id="company" class="view"></section>
+        <section id="admin" class="view"></section>
+        <section id="ai" class="view"></section>
+        <section id="profile" class="view"></section>
+        <section id="about" class="view"></section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "name": "datagap-hackathon-prototype",
+  "version": "1.0.0",
+  "private": true,
+  "description": "DataGap hackathon prototype for ethical data sharing with a special focus on Al Quaa camel farming.",
+  "scripts": {
+    "check": "node --check app.js"
+  }
+}
