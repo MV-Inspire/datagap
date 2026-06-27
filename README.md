@@ -223,6 +223,13 @@ The Activity Diagram models the primary workflow of the platform, from user inte
   <img src="assets/UC1-user_registration_login.png" alt="DataGap Activity Diagram" width="100%">
 </p>
 
+> [!TIP]
+> **Additional Design Artifacts**
+>
+> To keep this README concise and focused on the core solution, only the primary business and system design diagrams are included above.
+>
+> Additional supporting artifacts—including customer journey maps, positioning maps, supplementary UML diagrams, sequence diagrams, activity diagrams, and design documentation—are available in the **`design-artifacts`** directory for further review.
+
 
 
 # ✅ Impact Claims
@@ -492,30 +499,43 @@ The architecture supports one general marketplace with unlimited specialized com
 ```text
 .
 ├── 📄 README.md
+├── 📄 LICENSE
+├── 📄 .gitignore
 ├── 📄 index.html
 ├── 🎨 styles.css
 ├── ⚙️ app.js
 ├── 📦 package.json
-├── 📄 .gitignore
 │
 ├── 📂 assets
-│   ├── 🖼️ Logo.png
-│   ├── 🖼️ Thumbnail
 │   ├── 🖼️ Business Model Canvas.jpg
-│   ├── 🖼️ VPC.png
+│   ├── 🖼️ Logo.png
 │   ├── 🖼️ System Architecture Design.png
 │   ├── 🖼️ Text Based Use Case 1.png
+│   ├── 🖼️ Thumbnail
 │   ├── 🖼️ UC1-user_registration_login.png
 │   ├── 🖼️ Use Case UML.jpg
+│   ├── 🖼️ VPC.png
+│   │
 │   └── 📂 screenshots
+│       ├── 🖼️ UC1-user_registration_login.png
+│       ├── 🖼️ activity-controls.png
+│       ├── 🖼️ admin-review-audit.png
+│       ├── 🖼️ company-marketplace.png
+│       ├── 🖼️ consent-categories.png
+│       ├── 🖼️ data-control-center.png
+│       ├── 🖼️ insight-signals.png
+│       ├── 🖼️ personal-permissions.png
+│       ├── 🖼️ submit-data-surveys.png
+│       ├── 🖼️ trust-about.png
+│       └── 🖼️ wallet-rewards.png
 │
 └── 📂 design-artifacts
-    ├── 🖼️ journey map.png
-    ├── 🖼️ positioning map.png
-    ├── 📄 DataGap_Text-Based_Use_Cases...
-    ├── 📄 Class diagram notes.docx
     ├── 📦 ActivityDiagrams.zip
-    └── 📦 Sequence Diagrams.rar
+    ├── 📄 Class diagram notes.docx
+    ├── 📄 DataGap_Text-Based_Use_Cases...
+    ├── 📦 Sequence Diagrams.rar
+    ├── 🖼️ journey map.png
+    └── 🖼️ positioning map.png
 ```
 
 ---
