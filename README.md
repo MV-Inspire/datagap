@@ -263,24 +263,6 @@ Al Quaa camel farming is the first local module, but the model can be repeated f
 
 ---
 
-## How to Run
-
-No installation is required.
-
-Open:
-
-```text
-index.html
-```
-
-Optional syntax check:
-
-```bash
-npm run check
-```
-
----
-
 ## Recommended Demo Flow
 
 Judges can verify the main flow in under five minutes:
@@ -327,22 +309,6 @@ Judges can verify the main flow in under five minutes:
 ```
 
 Screenshots and a demo video may be added before final submission. The current app runs from the files above.
-
----
-
-## Evidence and Validation
-
-- `npm run check` validates JavaScript syntax.
-- Browser testing confirmed:
-  - submissions create wallet credit,
-  - survey completion adds reward,
-  - company purchase creates revenue share,
-  - wallet ledger updates,
-  - buyer ranking updates,
-  - admin review changes submission status,
-  - consent changes appear in the audit log,
-  - delete-data flow clears user-controlled data,
-  - state persists after reload.
 
 ---
 
