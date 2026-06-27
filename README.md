@@ -123,7 +123,16 @@ A specialized module designed specifically for the Al Quaa community, supporting
 
 This dual-platform architecture demonstrates how DataGap can deliver immediate value to a specific rural community while providing a scalable foundation for future expansion into additional industries and regions.
 
+# 👥 Target Users
 
+- 🐪 Camel farmers in Al Quaa
+- 💼 Local entrepreneurs deciding what to sell, build, or improve
+- 🌾 Feed suppliers
+- 🩺 Veterinarians
+- 🥛 Camel milk companies
+- 🌱 Agri-tech startups
+- 🎓 Researchers
+- 📱 Everyday users who want control over their data and rewards
 
 ---
 
@@ -154,18 +163,40 @@ This approach enables the team to validate the platform's core concept, user wor
 > Details of the implemented features and simulated components are presented later in the **Implemented Demo Behaviors** and **What Is Simulated** sections.
 
 ---
-# 👥 Target Users
 
-- 🐪 Camel farmers in Al Quaa
-- 💼 Local entrepreneurs deciding what to sell, build, or improve
-- 🌾 Feed suppliers
-- 🩺 Veterinarians
-- 🥛 Camel milk companies
-- 🌱 Agri-tech startups
-- 🎓 Researchers
-- 📱 Everyday users who want control over their data and rewards
+# 🏗️ System Design
+
+This section presents the high-level design of the **DataGap** platform, illustrating its overall architecture, user interactions, and core system workflows. The diagrams provide a conceptual view of how the prototype is structured and how its primary components interact.
+
+## 🏛️ System Architecture
+
+The following diagram provides a high-level overview of the DataGap platform, showing the primary user groups, core platform modules, data flow, storage layer, and external services considered for future deployment.
+
+<p align="center">
+  <img src="assets/system-architecture.png" alt="DataGap System Architecture Diagram" width="100%">
+</p>
 
 ---
+
+## 👥 Use Case Diagrams
+
+We created Use Case diagrams to showcase how system stakeholders will be interacting with the system to-be, here we showcase 1 text-based use case, as-well as a UML use case diagram.
+
+<p align="center">
+  <img src="assets/use-case-diagram.png" alt="DataGap Use Case Diagram" width="100%">
+</p>
+
+---
+
+## 🔄 Activity Diagram
+
+The Activity Diagram models the primary workflow of the platform, from user interaction and consent management through data submission, marketplace processing, and reward generation.
+
+<p align="center">
+  <img src="assets/activity-diagram.png" alt="DataGap Activity Diagram" width="100%">
+</p>
+
+
 
 # ✅ Impact Claims
 
