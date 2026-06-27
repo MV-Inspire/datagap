@@ -2,7 +2,7 @@ const dataCategories = [
   {
     id: "spending",
     name: "Spending preferences",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 50,
     description: "Purchase categories, budget ranges, brand preferences, and shopping frequency.",
@@ -10,7 +10,7 @@ const dataCategories = [
   {
     id: "mobility",
     name: "Mobility patterns",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 60,
     description: "Commute areas, transport choices, trip frequency, and preferred travel times.",
@@ -18,7 +18,7 @@ const dataCategories = [
   {
     id: "digital-preferences",
     name: "Digital preferences",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 40,
     description: "App interests, content preferences, online service habits, and product feedback.",
@@ -26,7 +26,7 @@ const dataCategories = [
   {
     id: "food-dining",
     name: "Food and dining habits",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 48,
     description: "Cuisine preferences, delivery usage, grocery behavior, and dietary needs.",
@@ -34,7 +34,7 @@ const dataCategories = [
   {
     id: "health-wellness",
     name: "Health and wellness interests",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 58,
     description: "Fitness goals, wellness spending, sleep routines, and preventive-care interests.",
@@ -42,7 +42,7 @@ const dataCategories = [
   {
     id: "home-utilities",
     name: "Home and utility usage",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 52,
     description: "Electricity habits, smart-home devices, internet plans, and household needs.",
@@ -50,7 +50,7 @@ const dataCategories = [
   {
     id: "education-skills",
     name: "Education and skills",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 44,
     description: "Learning goals, course interests, language skills, and training preferences.",
@@ -58,7 +58,7 @@ const dataCategories = [
   {
     id: "entertainment",
     name: "Entertainment preferences",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 38,
     description: "Streaming habits, gaming interests, events, sports, and media preferences.",
@@ -66,7 +66,7 @@ const dataCategories = [
   {
     id: "local-services",
     name: "Local service needs",
-    focus: "General everyday users",
+    focus: "Personal data program",
     section: "General user section",
     reward: 46,
     description: "Demand for salons, repairs, childcare, cleaning, delivery, and community services.",
@@ -82,7 +82,7 @@ const dataCategories = [
   {
     id: "camel-health",
     name: "Camel health records",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 95,
     description: "Symptoms, vaccines, vet visits, and recovery notes.",
@@ -90,7 +90,7 @@ const dataCategories = [
   {
     id: "feeding",
     name: "Feeding and supply usage",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 70,
     description: "Feed type, quantity, cost, and supplier availability.",
@@ -98,7 +98,7 @@ const dataCategories = [
   {
     id: "milk-production",
     name: "Milk production",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 90,
     description: "Daily yield, seasonality, and herd productivity.",
@@ -106,7 +106,7 @@ const dataCategories = [
   {
     id: "breeding",
     name: "Breeding records",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 85,
     description: "Pregnancy status, lineage, age, and breeding outcomes.",
@@ -114,7 +114,7 @@ const dataCategories = [
   {
     id: "environment",
     name: "Environment and grazing",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 55,
     description: "Heat, water access, grazing patterns, and weather notes.",
@@ -122,7 +122,7 @@ const dataCategories = [
   {
     id: "market-prices",
     name: "Camel market prices",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 45,
     description: "Feed prices, milk demand, animal sale ranges, and local market changes.",
@@ -130,7 +130,7 @@ const dataCategories = [
   {
     id: "farm-equipment",
     name: "Farm equipment usage",
-    focus: "Al Quaa camel farming",
+    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 50,
     description: "Water tanks, shade systems, milking tools, maintenance needs, and equipment costs.",
@@ -481,7 +481,7 @@ function setTrack(track) {
   saveState();
   rerender();
   setView(state.activeView);
-  showToast(`${track === "general" ? "General" : "Camel"} view selected`);
+  showToast(`${track === "general" ? "Personal" : "Farm"} view selected`);
 }
 
 function updateHeader() {
@@ -501,14 +501,14 @@ function renderOverview() {
   const activeCategories = dataCategories.filter((category) => state.consent.has(category.id));
   const overviewGroups = {
     general: {
-      eyebrow: "General users",
-      title: "Everyday data",
+      eyebrow: "Personal",
+      title: "Personal data",
       description: "Useful for retailers, mobility teams, service businesses, wellness brands, and local entrepreneurs.",
       ids: ["spending", "mobility", "digital-preferences", "food-dining", "health-wellness", "local-services"],
     },
     camel: {
-      eyebrow: "Al Quaa focus",
-      title: "Camel farming data",
+      eyebrow: "Al Quaa",
+      title: "Farm records",
       description: "Useful for vets, feed suppliers, agri-tech companies, tourism operators, and researchers.",
       ids: ["camel-health", "feeding", "milk-production", "environment", "market-prices", "stargazing-tourism"],
     },
@@ -525,7 +525,7 @@ function renderOverview() {
           <div>
             <p class="eyebrow">Sharing controls</p>
             <h2>Choose what DataGap can use</h2>
-            <p class="muted">Currently showing ${selectedGroup.title.toLowerCase()}. Use the small View switch above to change between general and camel data.</p>
+            <p class="muted">Currently showing ${selectedGroup.title.toLowerCase()}. Use the View switch to move between personal and farm data.</p>
           </div>
           <button class="secondary shortcut" type="button" data-shortcut="permissions">All categories</button>
         </div>
@@ -648,12 +648,12 @@ function renderPermissions() {
   const grouped = [visibleSection]
     .map((section) => {
       const items = dataCategories.filter((category) => category.section === section);
-      const label = section === "General user section" ? "General user data" : "Al Quaa camel farming";
+      const label = section === "General user section" ? "Personal data" : "Al Quaa farm records";
       return `
         <section class="permission-zone">
           <div class="section-head">
             <div>
-              <p class="eyebrow">${section === "General user section" ? "Everyday life module" : "Special local module"}</p>
+              <p class="eyebrow">${section === "General user section" ? "Personal" : "Al Quaa farms"}</p>
               <h2>${label}</h2>
             </div>
             <span class="zone-count">${items.filter((category) => state.consent.has(category.id)).length}/${items.length} active</span>
@@ -685,7 +685,7 @@ function renderPermissions() {
       <div>
         <p class="eyebrow">Consent center</p>
         <h2>Choose exactly what can be shared</h2>
-        <p>Currently showing ${state.activeTrack === "camel" ? "Al Quaa camel-farming" : "general everyday"} categories. Use the View switch above to change tracks.</p>
+        <p>Currently showing ${state.activeTrack === "camel" ? "Al Quaa farm" : "personal"} categories. Use the View switch above to change tracks.</p>
       </div>
       <aside>
         <span>Estimated monthly value</span>
@@ -1419,12 +1419,12 @@ function renderAbout() {
     <div class="about-grid">
       <article class="card about-card">
         <span>01</span>
-        <h2>General Life</h2>
-        <p>Users choose what everyday data categories they are willing to share, see estimated compensation, monitor earnings, complete surveys, and delete their data at any time.</p>
+        <h2>Personal Data</h2>
+        <p>Users choose which personal categories they are willing to share, see estimated compensation, monitor earnings, complete surveys, and delete their data at any time.</p>
       </article>
       <article class="card about-card featured">
         <span>02</span>
-        <h2>Al Quaa Camel Farming</h2>
+        <h2>Al Quaa Farm Records</h2>
         <p>Farmers can submit and monetize local records such as herd health, feeding, milk production, veterinary visits, heat stress, and market prices.</p>
       </article>
       <article class="card about-card">
