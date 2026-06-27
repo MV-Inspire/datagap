@@ -8,3 +8,4 @@ node_modules/
 .env.*
 *.log
 Walk-through.mov
+assets/walkthrough.mp4
