@@ -136,7 +136,7 @@ The analysis outlines the platform's business model and the scope of the **Minim
 The Business Model Canvas summarizes the key components of DataGap's business model, including its value proposition, customer segments, revenue streams, key partners, and operational activities.
 
 <p align="center">
-  <img src="assets/business-model-canvas.png" alt="DataGap Business Model Canvas" width="100%">
+  <img src="assets/assets/Business Model Canvas.jpg" alt="DataGap Business Model Canvas" width="100%">
 </p>
 
 ---
