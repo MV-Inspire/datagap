@@ -498,13 +498,24 @@ The architecture supports one general marketplace with unlimited specialized com
 ├── 📦 package.json
 ├── 📄 .gitignore
 │
-└── 📂 assets
-    ├── 🖼️ Logo.png
-    ├── 🖼️ Business Model Canvas.jpg
-    ├── 🖼️ VPC.png
-    ├── 🖼️ System Architecture Design.png
-    ├── 🖼️ Text Based Use Case 1.png
-    └── 🎥 walkthrough.mp4
+├── 📂 assets
+│   ├── 🖼️ Logo.png
+│   ├── 🖼️ Thumbnail
+│   ├── 🖼️ Business Model Canvas.jpg
+│   ├── 🖼️ VPC.png
+│   ├── 🖼️ System Architecture Design.png
+│   ├── 🖼️ Text Based Use Case 1.png
+│   ├── 🖼️ UC1-user_registration_login.png
+│   ├── 🖼️ Use Case UML.jpg
+│   └── 📂 screenshots
+│
+└── 📂 design-artifacts
+    ├── 🖼️ journey map.png
+    ├── 🖼️ positioning map.png
+    ├── 📄 DataGap_Text-Based_Use_Cases...
+    ├── 📄 Class diagram notes.docx
+    ├── 📦 ActivityDiagrams.zip
+    └── 📦 Sequence Diagrams.rar
 ```
 
 ---
