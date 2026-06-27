@@ -19,6 +19,10 @@
 
 <br>
 
+### 🚀 Live Prototype
+
+[Open DataGap on Vercel](https://data-gap-hackathon.vercel.app/)
+
 ### 🎥 Prototype Walkthrough
 
 [Watch the walkthrough video](https://github.com/MV-Inspire/datagap/releases/tag/v1.0-demo)
