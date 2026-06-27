@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/Logo.png" alt="DataGap Logo" width="180">
+<img src="assets/Logo.png" alt="DataGap Logo" width="250">
 
 # 🚀 DataGap
 
