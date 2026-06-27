@@ -1,5 +1,8 @@
 .DS_Store
 tmp/
+docs/
+output/
+Notes.docx
 node_modules/
 .env
 .env.*
