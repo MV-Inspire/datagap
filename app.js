@@ -2,7 +2,6 @@ const dataCategories = [
   {
     id: "spending",
     name: "Spending preferences",
-    focus: "Personal data program",
     section: "General user section",
     reward: 50,
     description: "Purchase categories, budget ranges, brand preferences, and shopping frequency.",
@@ -10,7 +9,6 @@ const dataCategories = [
   {
     id: "mobility",
     name: "Mobility patterns",
-    focus: "Personal data program",
     section: "General user section",
     reward: 60,
     description: "Commute areas, transport choices, trip frequency, and preferred travel times.",
@@ -18,7 +16,6 @@ const dataCategories = [
   {
     id: "digital-preferences",
     name: "Digital preferences",
-    focus: "Personal data program",
     section: "General user section",
     reward: 40,
     description: "App interests, content preferences, online service habits, and product feedback.",
@@ -26,7 +23,6 @@ const dataCategories = [
   {
     id: "food-dining",
     name: "Food and dining habits",
-    focus: "Personal data program",
     section: "General user section",
     reward: 48,
     description: "Cuisine preferences, delivery usage, grocery behavior, and dietary needs.",
@@ -34,7 +30,6 @@ const dataCategories = [
   {
     id: "health-wellness",
     name: "Health and wellness interests",
-    focus: "Personal data program",
     section: "General user section",
     reward: 58,
     description: "Fitness goals, wellness spending, sleep routines, and preventive-care interests.",
@@ -42,7 +37,6 @@ const dataCategories = [
   {
     id: "home-utilities",
     name: "Home and utility usage",
-    focus: "Personal data program",
     section: "General user section",
     reward: 52,
     description: "Electricity habits, smart-home devices, internet plans, and household needs.",
@@ -50,7 +44,6 @@ const dataCategories = [
   {
     id: "education-skills",
     name: "Education and skills",
-    focus: "Personal data program",
     section: "General user section",
     reward: 44,
     description: "Learning goals, course interests, language skills, and training preferences.",
@@ -58,7 +51,6 @@ const dataCategories = [
   {
     id: "entertainment",
     name: "Entertainment preferences",
-    focus: "Personal data program",
     section: "General user section",
     reward: 38,
     description: "Streaming habits, gaming interests, events, sports, and media preferences.",
@@ -66,7 +58,6 @@ const dataCategories = [
   {
     id: "local-services",
     name: "Local service needs",
-    focus: "Personal data program",
     section: "General user section",
     reward: 46,
     description: "Demand for salons, repairs, childcare, cleaning, delivery, and community services.",
@@ -74,7 +65,6 @@ const dataCategories = [
   {
     id: "surveys",
     name: "Sponsored surveys",
-    focus: "Shared marketplace data",
     section: "General user section",
     reward: 35,
     description: "Paid questions from brands, researchers, service providers, and local businesses.",
@@ -82,7 +72,6 @@ const dataCategories = [
   {
     id: "camel-health",
     name: "Camel health records",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 95,
     description: "Symptoms, vaccines, vet visits, and recovery notes.",
@@ -90,7 +79,6 @@ const dataCategories = [
   {
     id: "feeding",
     name: "Feeding and supply usage",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 70,
     description: "Feed type, quantity, cost, and supplier availability.",
@@ -98,7 +86,6 @@ const dataCategories = [
   {
     id: "milk-production",
     name: "Milk production",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 90,
     description: "Daily yield, seasonality, and herd productivity.",
@@ -106,7 +93,6 @@ const dataCategories = [
   {
     id: "breeding",
     name: "Breeding records",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 85,
     description: "Pregnancy status, lineage, age, and breeding outcomes.",
@@ -114,7 +100,6 @@ const dataCategories = [
   {
     id: "environment",
     name: "Environment and grazing",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 55,
     description: "Heat, water access, grazing patterns, and weather notes.",
@@ -122,7 +107,6 @@ const dataCategories = [
   {
     id: "market-prices",
     name: "Camel market prices",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 45,
     description: "Feed prices, milk demand, animal sale ranges, and local market changes.",
@@ -130,7 +114,6 @@ const dataCategories = [
   {
     id: "farm-equipment",
     name: "Farm equipment usage",
-    focus: "Al Quaa farm network",
     section: "Camel farmer section",
     reward: 50,
     description: "Water tanks, shade systems, milking tools, maintenance needs, and equipment costs.",
@@ -138,7 +121,6 @@ const dataCategories = [
   {
     id: "stargazing-tourism",
     name: "Stargazing visitor demand",
-    focus: "Al Quaa local economy",
     section: "Camel farmer section",
     reward: 42,
     description: "Visitor needs, farm-tour interest, parking, timing, hospitality, and local tourism demand.",
@@ -545,7 +527,6 @@ function renderOverview() {
                   <input type="checkbox" data-home-category="${category.id}" ${state.consent.has(category.id) ? "checked" : ""} />
                   <span>
                     <strong>${category.name}</strong>
-                    <small>${category.focus}</small>
                   </span>
                   <em>${money(category.reward)}</em>
                 </label>
@@ -668,8 +649,7 @@ function renderPermissions() {
                 <input type="checkbox" data-category="${category.id}" ${state.consent.has(category.id) ? "checked" : ""} />
                 <span>
                   <strong>${category.name}</strong><br />
-                  <span class="muted">${category.description}</span><br />
-                  <span class="small">${category.focus}</span>
+                  <span class="muted">${category.description}</span>
                 </span>
                 <span class="reward">${money(category.reward)}/mo</span>
               </label>
