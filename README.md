@@ -220,7 +220,7 @@ The following use case diagrams illustrate how the different stakeholders intera
 The Activity Diagram models the primary workflow of the platform, from user interaction and consent management through data submission, marketplace processing, and reward generation.
 
 <p align="center">
-  <img src="assets/activity-diagram.png" alt="DataGap Activity Diagram" width="100%">
+  <img src="assets/UC1-user_registration_login.png" alt="DataGap Activity Diagram" width="100%">
 </p>
 
 
